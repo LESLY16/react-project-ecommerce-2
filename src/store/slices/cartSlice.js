@@ -7,7 +7,13 @@ const loadCartFromStorage = () => {
     if (serializedCart === null) {
       return { items: [], totalAmount: 0, totalItems: 0 };
     }
-    return JSON.parse(serializedCart);
+    const cart = JSON.parse(serializedCart);
+    // Ensure the cart has the correct structure
+    return {
+      items: Array.isArray(cart.items) ? cart.items : [],
+      totalAmount: typeof cart.totalAmount === 'number' ? cart.totalAmount : 0,
+      totalItems: typeof cart.totalItems === 'number' ? cart.totalItems : 0
+    };
   } catch (error) {
     return { items: [], totalAmount: 0, totalItems: 0 };
   }
@@ -25,6 +31,10 @@ const saveCartToStorage = (cart) => {
 
 // Calculate totals
 const calculateTotals = (items) => {
+  // Ensure items is an array
+  if (!items || !Array.isArray(items)) {
+    return { totalAmount: 0, totalItems: 0 };
+  }
   const totalAmount = items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   return { totalAmount: parseFloat(totalAmount.toFixed(2)), totalItems };
