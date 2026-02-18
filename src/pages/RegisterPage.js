@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../store/slices/authSlice';
@@ -7,7 +7,7 @@ import './RegisterPage.css';
 const RegisterPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { loading, error } = useSelector((state) => state.auth);
+  const { loading, error, isAuthenticated } = useSelector((state) => state.auth);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -17,6 +17,12 @@ const RegisterPage = () => {
   });
 
   const [validationError, setValidationError] = useState('');
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -46,9 +52,6 @@ const RegisterPage = () => {
     }
 
     dispatch(register(formData.name, formData.email, formData.password));
-    setTimeout(() => {
-      navigate('/');
-    }, 600);
   };
 
   return (
