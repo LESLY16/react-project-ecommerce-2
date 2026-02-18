@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import CartItem from '../components/CartItem';
+import CartItem from '../components/CartItem.jsx';
 import './CartPage.css';
 
 const CartPage = () => {
