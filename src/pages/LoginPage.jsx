@@ -12,7 +12,8 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simple login simulation
+    // NOTE: This is a simulated login for demo purposes only.
+    // In production, implement proper backend authentication with secure password handling.
     dispatch(login({ email }));
     navigate('/cart');
   };

@@ -66,14 +66,14 @@ npm run preview
 ```
 src/
 ├── components/      # Reusable UI components
-│   ├── CartItem.js
-│   └── Navbar.js
+│   ├── CartItem.jsx
+│   └── Navbar.jsx
 ├── pages/          # Page components
-│   ├── CartPage.js
-│   ├── CheckoutPage.js
-│   ├── HomePage.js
-│   ├── LoginPage.js
-│   └── ProductsPage.js
+│   ├── CartPage.jsx
+│   ├── CheckoutPage.jsx
+│   ├── HomePage.jsx
+│   ├── LoginPage.jsx
+│   └── ProductsPage.jsx
 ├── store/          # Redux store configuration
 │   ├── slices/
 │   │   ├── authSlice.js
