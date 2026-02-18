@@ -7,7 +7,13 @@ const loadCartFromStorage = () => {
     if (serializedCart === null) {
       return { items: [], totalAmount: 0, totalItems: 0 };
     }
-    return JSON.parse(serializedCart);
+    const cart = JSON.parse(serializedCart);
+    // Ensure the cart has the correct structure
+    return {
+      items: Array.isArray(cart.items) ? cart.items : [],
+      totalAmount: typeof cart.totalAmount === 'number' ? cart.totalAmount : 0,
+      totalItems: typeof cart.totalItems === 'number' ? cart.totalItems : 0
+    };
   } catch (error) {
     return { items: [], totalAmount: 0, totalItems: 0 };
   }
@@ -40,10 +46,6 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { product, quantity = 1 } = action.payload;
-      // Ensure items array exists
-      if (!state.items || !Array.isArray(state.items)) {
-        state.items = [];
-      }
       const existingItem = state.items.find(item => item.product.id === product.id);
       
       if (existingItem) {
@@ -59,10 +61,6 @@ const cartSlice = createSlice({
     },
     removeFromCart: (state, action) => {
       const productId = action.payload;
-      // Ensure items array exists
-      if (!state.items || !Array.isArray(state.items)) {
-        state.items = [];
-      }
       state.items = state.items.filter(item => item.product.id !== productId);
       
       const totals = calculateTotals(state.items);
@@ -72,10 +70,6 @@ const cartSlice = createSlice({
     },
     updateQuantity: (state, action) => {
       const { productId, quantity } = action.payload;
-      // Ensure items array exists
-      if (!state.items || !Array.isArray(state.items)) {
-        state.items = [];
-      }
       const item = state.items.find(item => item.product.id === productId);
       
       if (item && quantity > 0) {
