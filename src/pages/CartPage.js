@@ -20,7 +20,7 @@ const CartPage = () => {
     }
   };
 
-  if (items.length === 0) {
+  if (!items || items.length === 0) {
     return (
       <div className="cart-page">
         <div className="cart-container">
