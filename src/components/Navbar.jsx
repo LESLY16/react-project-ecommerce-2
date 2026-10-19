@@ -19,8 +19,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          E-Commerce Store
+        <Link to="/" className="navbar-logo" aria-label="E-Commerce Store home">
+          <img src="/vite.svg" alt="E-Commerce Store logo" className="logo-image" />
+          <span className="logo-text">E-Commerce Store</span>
         </Link>
         <ul className="navbar-menu">
           <li>
