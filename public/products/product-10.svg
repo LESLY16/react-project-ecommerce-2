@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Bluetooth Speaker">
+  <defs>
+    <linearGradient id="speakerBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#e2d8ff"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .speaker { animation: hover 3.2s ease-in-out infinite; }
+    .ring { animation: spin 5s linear infinite; transform-origin: center; }
+    @keyframes hover { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#speakerBg)"/>
+  <g class="speaker">
+    <rect x="56" y="48" width="88" height="104" rx="20" fill="#7c3aed"/>
+    <circle cx="100" cy="90" r="24" fill="#f3e8ff"/>
+    <circle cx="100" cy="90" r="12" fill="#7c3aed"/>
+    <g class="ring">
+      <circle cx="100" cy="90" r="38" fill="none" stroke="#d8b4fe" stroke-width="4" stroke-dasharray="8 8"/>
+    </g>
+    <path d="M70 142 H130" stroke="#d8b4fe" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

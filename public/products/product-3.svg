@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Smart Watch">
+  <defs>
+    <linearGradient id="watchBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f5f0ff"/>
+      <stop offset="100%" stop-color="#e9ddff"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .watch { animation: floaty 3.4s ease-in-out infinite; transform-origin: center; }
+    .hand { animation: spin 4s linear infinite; transform-origin: center; }
+    .pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-9px); } }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#watchBg)"/>
+  <g class="watch">
+    <rect x="56" y="38" width="88" height="124" rx="18" fill="#2a2d3a"/>
+    <rect x="66" y="48" width="68" height="104" rx="12" fill="#111827"/>
+    <circle cx="100" cy="100" r="30" fill="#1f2937" stroke="#8b5cf6" stroke-width="3"/>
+    <circle cx="100" cy="100" r="22" fill="#e5e7eb"/>
+    <g class="hand">
+      <path d="M100 100 L100 78" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round"/>
+      <path d="M100 100 L118 110" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <circle cx="100" cy="100" r="4" fill="#8b5cf6" class="pulse"/>
+    <rect x="82" y="154" width="36" height="8" rx="4" fill="#8b5cf6"/>
+  </g>
+</svg>

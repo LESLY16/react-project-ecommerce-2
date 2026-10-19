@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Hat">
+  <defs>
+    <linearGradient id="hatBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffe7d1"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .hat { animation: floaty 3.3s ease-in-out infinite; transform-origin: center; }
+    .band { animation: sway 2.7s ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-9px); } }
+    @keyframes sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(3deg); } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#hatBg)"/>
+  <g class="hat">
+    <path d="M52 110 Q100 70 148 110 L132 134 H68 Z" fill="#f97316"/>
+    <path d="M62 110 Q100 88 138 110" fill="none" stroke="#fed7aa" stroke-width="7" stroke-linecap="round"/>
+    <g class="band">
+      <rect x="72" y="118" width="56" height="18" rx="9" fill="#fdba74"/>
+    </g>
+  </g>
+</svg>

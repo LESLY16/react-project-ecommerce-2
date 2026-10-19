@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Notebook">
+  <defs>
+    <linearGradient id="notesBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .book { animation: floaty 3.5s ease-in-out infinite; }
+    .pages { animation: shimmer 2.5s ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes shimmer { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#notesBg)"/>
+  <g class="book">
+    <rect x="62" y="44" width="76" height="112" rx="12" fill="#ffffff" stroke="#86efac" stroke-width="4"/>
+    <path d="M100 52 L100 148" stroke="#86efac" stroke-width="4" stroke-linecap="round"/>
+    <path d="M76 70 H118" stroke="#bbf7d0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M76 88 H118" stroke="#bbf7d0" stroke-width="4" stroke-linecap="round" class="pages"/>
+    <path d="M76 106 H112" stroke="#bbf7d0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M76 124 H114" stroke="#bbf7d0" stroke-width="4" stroke-linecap="round" class="pages"/>
+  </g>
+</svg>

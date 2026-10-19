@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Running Shoes">
+  <defs>
+    <linearGradient id="shoeBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#effff4"/>
+      <stop offset="100%" stop-color="#dbf7e8"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .shoe { animation: bounce 2.8s ease-in-out infinite; transform-origin: center; }
+    .spark { animation: twinkle 1.8s ease-in-out infinite; }
+    @keyframes bounce { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    @keyframes twinkle { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#shoeBg)"/>
+  <g class="shoe">
+    <path d="M38 126 C56 100, 82 90, 122 94 L158 100 L170 118 L150 136 L52 136 Q32 136 38 126 Z" fill="#2ec27e"/>
+    <path d="M58 104 L112 108 L140 122 L60 122 Z" fill="#6ee7b7" opacity="0.75"/>
+    <path d="M44 136 H162" stroke="#1d8f69" stroke-width="6" stroke-linecap="round"/>
+    <path d="M74 94 L75 82 L90 82 L92 94" fill="#1d8f69"/>
+    <circle cx="70" cy="140" r="6" fill="#baf6d8"/>
+    <circle cx="138" cy="140" r="6" fill="#baf6d8"/>
+  </g>
+  <g class="spark">
+    <path d="M154 42 L156 52 L166 54 L156 56 L154 66 L152 56 L142 54 L152 52 Z" fill="#7ae1a2"/>
+    <path d="M42 52 L44 60 L52 62 L44 64 L42 72 L40 64 L32 62 L40 60 Z" fill="#98efc2"/>
+  </g>
+</svg>

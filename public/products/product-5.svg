@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sunglasses">
+  <defs>
+    <linearGradient id="glassesBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f1f5ff"/>
+      <stop offset="100%" stop-color="#dfe9ff"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .glass { animation: floaty 3.5s ease-in-out infinite; }
+    .shine { animation: shimmer 2.4s ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes shimmer { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#glassesBg)"/>
+  <g class="glass">
+    <rect x="38" y="78" width="54" height="28" rx="12" fill="#1f2937"/>
+    <rect x="108" y="78" width="54" height="28" rx="12" fill="#1f2937"/>
+    <path d="M92 92 H108" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+    <path d="M36 90 L24 96 L28 105 L36 100" fill="#cbd5e1"/>
+    <path d="M164 90 L176 96 L172 105 L164 100" fill="#cbd5e1"/>
+    <path d="M44 82 Q52 62 68 62" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M132 82 Q124 62 108 62" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+    <rect x="54" y="84" width="24" height="8" rx="4" fill="#9fbaff" opacity="0.7" class="shine"/>
+    <rect x="122" y="84" width="24" height="8" rx="4" fill="#9fbaff" opacity="0.7" class="shine"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Jeans">
+  <defs>
+    <linearGradient id="jeansBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eefaff"/>
+      <stop offset="100%" stop-color="#dfeeff"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .jeans { animation: floaty 3.6s ease-in-out infinite; }
+    .pocket { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    @keyframes pulse { 0%,100% { opacity: 0.8; } 50% { opacity: 1; } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#jeansBg)"/>
+  <g class="jeans">
+    <path d="M74 44 L90 52 L100 134 L110 52 L126 44 L138 152 L108 166 L92 166 L62 152 Z" fill="#2b6cdf"/>
+    <path d="M88 48 L100 120 L112 48" fill="none" stroke="#dfeeff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M72 58 H82" stroke="#dfeeff" stroke-width="5" stroke-linecap="round"/>
+    <path d="M118 58 H128" stroke="#dfeeff" stroke-width="5" stroke-linecap="round"/>
+    <path d="M80 84 H120" stroke="#dfeeff" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+    <rect x="84" y="72" width="32" height="18" rx="8" fill="#dfeeff" opacity="0.85" class="pocket"/>
+  </g>
+</svg>

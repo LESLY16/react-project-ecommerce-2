@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Backpack">
+  <defs>
+    <linearGradient id="bagBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffebd2"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .bag { animation: hover 3.2s ease-in-out infinite; transform-origin: center; }
+    .strap { animation: sway 2.8s ease-in-out infinite; transform-origin: center; }
+    @keyframes hover { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#bagBg)"/>
+  <g class="bag">
+    <path d="M70 86 V75 Q70 54 90 54 H110 Q130 54 130 75 V86" fill="none" stroke="#f59e0b" stroke-width="10" stroke-linecap="round"/>
+    <g class="strap">
+      <path d="M72 86 Q60 110 64 146 L78 146 Q76 120 86 84 Z" fill="#f59e0b"/>
+      <path d="M128 86 Q140 110 136 146 L122 146 Q124 120 114 84 Z" fill="#f59e0b"/>
+    </g>
+    <rect x="62" y="82" width="76" height="74" rx="14" fill="#fbbf24"/>
+    <rect x="78" y="96" width="44" height="22" rx="8" fill="#fef3c7" opacity="0.9"/>
+    <circle cx="100" cy="115" r="7" fill="#f59e0b"/>
+  </g>
+</svg>

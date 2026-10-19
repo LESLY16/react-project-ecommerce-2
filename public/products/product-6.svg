@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Headphones">
+  <defs>
+    <linearGradient id="headsetBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#dff3ff"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .ear { animation: bounce 3s ease-in-out infinite; transform-origin: center; }
+    .band { animation: sway 3.4s ease-in-out infinite; }
+    @keyframes bounce { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    @keyframes sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#headsetBg)"/>
+  <g class="band">
+    <path d="M64 86 C64 52 83 34 100 34 C117 34 136 52 136 86" fill="none" stroke="#5b5bd6" stroke-width="16" stroke-linecap="round"/>
+    <g class="ear">
+      <rect x="50" y="86" width="24" height="56" rx="12" fill="#5b5bd6"/>
+      <rect x="126" y="86" width="24" height="56" rx="12" fill="#5b5bd6"/>
+      <circle cx="62" cy="111" r="8" fill="#dfe9ff"/>
+      <circle cx="138" cy="111" r="8" fill="#dfe9ff"/>
+    </g>
+  </g>
+</svg>

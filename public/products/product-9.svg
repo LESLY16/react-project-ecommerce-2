@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Coffee Mug">
+  <defs>
+    <linearGradient id="mugBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fff4e5"/>
+      <stop offset="100%" stop-color="#ffe7c5"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .mug { animation: bob 3s ease-in-out infinite; }
+    .steam { animation: steam 2.4s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
+    @keyframes steam { 0%,100% { opacity: 0.3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-6px); } }
+  </style>
+  <rect width="200" height="200" rx="24" fill="url(#mugBg)"/>
+  <g class="mug">
+    <path d="M68 76 H128 C136 76 142 82 142 90 V108 C142 130 126 144 104 144 H92 C70 144 54 130 54 108 V90 C54 82 60 76 68 76 Z" fill="#f7b267"/>
+    <path d="M140 90 H152 Q162 90 162 100 V110 Q162 120 152 120 H140" fill="none" stroke="#f7b267" stroke-width="6" stroke-linecap="round"/>
+    <path d="M66 80 H126" stroke="#ffd6a5" stroke-width="6" stroke-linecap="round"/>
+    <path d="M66 100 Q88 112 110 100" fill="none" stroke="#fff0d8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M78 78 Q82 56 92 56" fill="none" stroke="#fff0d8" stroke-width="5" stroke-linecap="round" class="steam"/>
+    <path d="M96 78 Q100 58 110 58" fill="none" stroke="#fff0d8" stroke-width="5" stroke-linecap="round" class="steam"/>
+  </g>
+</svg>
