@@ -1,26 +1,34 @@
-"# React E-Commerce Project
+# E-Commerce Store
 
-A modern e-commerce application built with React, Redux Toolkit, and Vite.
+A modern React e-commerce application built with Vite, Redux Toolkit, and React Router. This project includes a shopping cart, login flow, product browsing, and a responsive navigation component.
 
 ## Features
 
-- Product browsing and shopping cart functionality
-- Redux state management for cart and authentication
-- Responsive design
+- Product listing and browsing
+- Add-to-cart functionality
+- Cart quantity badge and checkout flow
+- User authentication state with Redux
+- Responsive layout for desktop and mobile
 - Client-side routing with React Router
 
 ## Tech Stack
 
-- **React 18** - UI library
-- **Vite** - Build tool and dev server
-- **Redux Toolkit** - State management
-- **React Router** - Client-side routing
+- React 18
+- Vite
+- Redux Toolkit
+- React Router DOM
+- JavaScript / JSX
+- CSS
+
+## Project Demo
+
+This app simulates a basic online storefront with product browsing and shopping cart interactions.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
+- Node.js 18+ or newer
 - npm or yarn
 
 ### Installation
@@ -36,56 +44,67 @@ cd react-project-ecommerce-2
 npm install
 ```
 
-### Development
+### Run the app
 
-Run the development server:
 ```bash
 npm run dev
 ```
 
-The application will open automatically at `http://localhost:3000`.
+The app will open in the browser at:
 
-### Build
+```bash
+http://localhost:5173
+```
 
-Create a production build:
+### Production build
+
 ```bash
 npm run build
 ```
 
-The built files will be in the `dist` directory.
+### Preview production build
 
-### Preview Production Build
-
-Preview the production build locally:
 ```bash
 npm run preview
 ```
 
 ## Project Structure
 
-```
+```bash
 src/
-├── components/      # Reusable UI components
-│   ├── CartItem.jsx
-│   └── Navbar.jsx
-├── pages/          # Page components
+├── components/
+│   ├── Navbar.jsx
+│   ├── Navbar.css
+│   └── ...
+├── pages/
+│   ├── HomePage.jsx
+│   ├── ProductsPage.jsx
 │   ├── CartPage.jsx
 │   ├── CheckoutPage.jsx
-│   ├── HomePage.jsx
 │   ├── LoginPage.jsx
-│   └── ProductsPage.jsx
-├── store/          # Redux store configuration
+│   └── ...
+├── store/
 │   ├── slices/
 │   │   ├── authSlice.js
 │   │   └── cartSlice.js
 │   └── store.js
-├── App.jsx         # Main App component
-├── main.jsx        # Application entry point
-└── index.css       # Global styles
+├── App.jsx
+├── main.jsx
+├── index.css
+└── ...
+public/
+├── vite.svg
+└── ...
 ```
+
+## Notes
+
+- The brand/logo in the header currently uses the default Vite SVG as a placeholder. The visible text label was removed from the header to create a compact logo on smaller screens.
+- You can replace `/vite.svg` with your own custom logo image for branding.
+- The updated navbar includes an accessible hamburger button and a mobile-friendly slide-down menu.
 
 ## Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build" 
+- `npm run dev` — start the development server
+- `npm run build` — build the production bundle
+- `npm run preview` — preview the production build locally
