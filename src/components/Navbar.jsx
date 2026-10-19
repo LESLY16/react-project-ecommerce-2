@@ -1,11 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../store/slices/authSlice';
 import './Navbar.css';
 
 const Navbar = () => {
   const { totalItems } = useSelector((state) => state.cart);
-  const { isAuthenticated } = useSelector((state) => state.auth);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    localStorage.removeItem('authUser');
+    navigate('/');
+  };
 
   return (
     <nav className="navbar">
@@ -27,7 +36,12 @@ const Navbar = () => {
           </li>
           <li>
             {isAuthenticated ? (
-              <span>Account</span>
+              <div className="account-actions">
+                <span className="account-email">{user?.email ?? 'Account'}</span>
+                <button type="button" className="logout-btn" onClick={handleLogout}>
+                  Logout
+                </button>
+              </div>
             ) : (
               <Link to="/login">Login</Link>
             )}
